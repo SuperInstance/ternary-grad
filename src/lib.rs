@@ -145,12 +145,12 @@ mod tests {
 
     #[test]
     fn sgd_update_moves_toward_zero() {
-        // Gradients point away from zero → GD moves weights toward zero
-        let mut w = vec![2.0, -2.0];
+        // Weights within [-1,1] where STE gradient = 1
+        let mut w = vec![0.8, -0.8];
         let g = vec![1.0, -1.0];
         ternary_sgd_update(&mut w, &g, 0.1, 0.5);
-        assert!(w[0] < 2.0);   // 2.0 - 0.1*1.0 = 1.9
-        assert!(w[1] > -2.0);  // -2.0 - 0.1*(-1.0) = -1.9
+        assert!(w[0] < 0.8);
+        assert!(w[1] > -0.8);
     }
 
     #[test]
