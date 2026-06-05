@@ -1,0 +1,9 @@
+[package]
+name = "ternary-grad"
+version = "0.1.0"
+edition = "2021"
+description = "Ternary gradient descent: STE for {-1,0,+1} quantization, TernaryOptimizer (SGD/Adam), gradient clipping, LR scheduling"
+license = "MIT"
+keywords = ["ternary", "gradient", "optimizer", "bitnet", "quantization"]
+
+[dependencies]
