@@ -7,3 +7,4 @@ license = "MIT"
 keywords = ["ternary", "gradient", "optimizer", "bitnet", "quantization"]
 
 [dependencies]
+ternary-types = { git = "https://github.com/SuperInstance/ternary-types.git", features = ["std"] }
